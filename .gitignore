@@ -1,0 +1,9 @@
+.quasar
+.DS_Store
+.thumbs.db
+node_modules
+/dist
+
+# Editor directories and files
+.idea
+.env
