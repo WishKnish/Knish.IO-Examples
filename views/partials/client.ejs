@@ -1,0 +1,49 @@
+<h1>1. The Knish.IO Client</h1>
+<p>The first step is to instantiate a <code>KnishIOClient</code> instance and assign a Cell. Your Cell represents your specific Knish.IO dApp. You should have received a <code>cellSlug</code> to use.</p>
+
+<div class="p-3">
+    <div class="card-body">
+        <div class="form-group row">
+            <label class="col-4 col-form-label" for="uri">Node URI</label>
+            <div class="col-8">
+                <div class="input-group">
+                    <div class="input-group-prepend">
+                        <div class="input-group-text">
+                            <i class="bi bi-globe"></i>
+                        </div>
+                    </div>
+                    <input id="uri" name="uri" placeholder="https://testnet.knish.io/graphql" value="https://testnet.knish.io/graphql" type="text" class="form-control" aria-describedby="uriHelpBlock" required="required">
+                </div>
+                <span id="uriHelpBlock" class="form-text text-muted">Please enter the Knish.IO node URI to which this dApp will connect.</span>
+            </div>
+        </div>
+        <div class="form-group row">
+            <label for="cell" class="col-4 col-form-label">Cell Slug</label>
+            <div class="col-8">
+                <div class="input-group">
+                    <div class="input-group-prepend">
+                        <div class="input-group-text">
+                            <i class="bi bi-window"></i>
+                        </div>
+                    </div>
+                    <input id="cell" name="cell" placeholder="TESTCELL" value="TESTCELL" type="text" class="form-control" aria-describedby="cellHelpBlock" required="required">
+                </div>
+                <span id="cellHelpBlock" class="form-text text-muted">Please enter the Knish.IO cell identifier for your dApp. You will receive one for production use.</span>
+            </div>
+        </div>
+        <div class="form-group row">
+            <label class="col-4">Use Legacy v.2 API</label>
+            <div class="col-8">
+                <div class="custom-control custom-radio custom-control-inline">
+                    <input name="legacy" id="legacy_0" type="radio" class="custom-control-input" value="true" required="required" aria-describedby="legacyHelpBlock">
+                    <label for="legacy_0" class="custom-control-label">Yes</label>
+                </div>
+                <div class="custom-control custom-radio custom-control-inline">
+                    <input name="legacy" id="legacy_1" type="radio" class="custom-control-input" value="false" required="required" aria-describedby="legacyHelpBlock" checked>
+                    <label for="legacy_1" class="custom-control-label">No</label>
+                </div>
+                <span id="legacyHelpBlock" class="form-text text-muted">Select "yes" if connecting to a legacy v.2 Knish.IO node. Most users can ignore this.</span>
+            </div>
+        </div>
+    </div>
+</div>

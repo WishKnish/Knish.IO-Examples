@@ -1,0 +1,21 @@
+<h1>2. The Secret and Authorization </h1>
+<p>Your <code>secret</code> is used to request authorization tokens from the node, build wallets, sign transactions, and figure out your user ID. It can be automatically derived from a <code>seed</code>, or manually through any cryptographic methods, so long as you end up with 2048 hexadecimal symbols.</p>
+
+<div class="p-3">
+    <div class="card-body">
+        <div class="form-group row">
+            <label class="col-4 col-form-label" for="uri">Seed</label>
+            <div class="col-8">
+                <div class="input-group">
+                    <div class="input-group-prepend">
+                        <div class="input-group-text">
+                            <i class="bi bi-key"></i>
+                        </div>
+                    </div>
+                    <input id="seed" name="seed" placeholder="12345:MyAppHashSalt" value="12345:MyAppHashSalt" type="text" class="form-control" aria-describedby="seedHelpBlock" required="required">
+                </div>
+                <span id="seedHelpBlock" class="form-text text-muted">Enter the seed from which your cryptographic secret will be automatically derived.</span>
+            </div>
+        </div>
+    </div>
+</div>
