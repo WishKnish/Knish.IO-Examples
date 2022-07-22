@@ -81,7 +81,7 @@ function formatReadResponse ( data ) {
       <table id="instancesTable${ instance.metaId }" class="table">
         <thead>
           <tr>
-            <th colspan="4" class="text-center">
+            <th colspan="5" class="text-center">
               ${ instance.metaType }: ${ instance.metaId }
             </th>
           </tr>
@@ -89,6 +89,7 @@ function formatReadResponse ( data ) {
             <th scope="col">#</th>
             <th scope="col">Key</th>
             <th scope="col">Value</th>
+            <th scope="col">Molecular Hash</th>
             <th scope="col">Timestamp</th>
           </tr>
         </thead>
@@ -102,6 +103,7 @@ function formatReadResponse ( data ) {
             <th scope="row">${ metaCount + 1 }</th>
             <td>${ instance.metas[ metaCount ].key }</td>
             <td>${ instance.metas[ metaCount ].value }</td>
+            <td>${ instance.metas[ metaCount ].molecularHash }</td>
             <td>${ formatDate( instance.metas[ metaCount ].createdAt ) }</td>
           </tr>
       `;
@@ -113,7 +115,7 @@ function formatReadResponse ( data ) {
         </tbody>
         <tfoot>
           <tr>
-            <td colspan="4" class="text-right">
+            <td colspan="5" class="text-right">
               Last updated at ${ formatDate( instance.createdAt ) }
             </td>
           </tr>
