@@ -4,6 +4,7 @@ const parseUrl = require('body-parser')
 const PORT = process.env.PORT || 5000
 const encodeUrl = parseUrl.urlencoded({ extended: false })
 const { KnishIOClient, generateSecret } = require( '@wishknish/knishio-client-js/dist/client.umd.js' );
+const secret = generateSecret();
 
 express()
   .use(express.static(path.join(__dirname, 'public')))
@@ -24,7 +25,7 @@ express()
 
     // Request an auth token
     let response = await client.requestAuthToken( {
-        secret: generateSecret(),
+        secret,
         cellSlug: req.cell
     } );
     //  console.log(response);
@@ -51,7 +52,7 @@ express()
     } )
     console.log(response);
     console.log(response[ 'instances' ][ 0 ].metas);
-    
+
 
     res.sendStatus(200)
   })
