@@ -1,0 +1,8 @@
+{
+  "name": "Knish.IO Examples",
+  "description": "Examples of Knish.IO SDK integration within a Node.JS dummy application.",
+  "repository": "https://github.com/WishKnish/Knish.IO-Examples",
+  "logo": "https://raw.githubusercontent.com/WishKnish/Knish.IO-Examples/main/public/icon.svg?token=GHSAT0AAAAAABJNUGB2U3IXQDBKX56JBWP6YWZ44LA",
+  "keywords": ["node", "express", "heroku"],
+  "image": "heroku/nodejs"
+}

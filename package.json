@@ -1,0 +1,48 @@
+{
+  "name": "knishio-examples",
+  "version": "1.0.0",
+  "description": "Example implementation of the Knish.IO JS/NodeJS client in a dummy app.",
+  "author": "Eugene Teplitsky <eugene@wishknish.com>",
+  "license": "GPL-3.0-or-later",
+  "engines": {
+    "node": ">= 16.0.0"
+  },
+  "main": "dist/index.js",
+  "scripts": {
+    "build": "babel index.js -d dist",
+    "start": "npm run build && node dist/index.js",
+    "test": "node test.js"
+  },
+  "dependencies": {
+    "@wishknish/knishio-client-js": "^0.4.48",
+    "body-parser": "^1.20.0",
+    "ejs": "^3.1.5",
+    "express": "^4.15.2"
+  },
+  "devDependencies": {
+    "@babel/cli": "^7.18.9",
+    "@babel/core": "^7.18.9",
+    "@babel/preset-env": "^7.18.9",
+    "got": "^11.3.0",
+    "tape": "^4.7.0"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/WishKnish/Knish.IO-Examples.git"
+  },
+  "keywords": [
+    "knishio",
+    "knish.io",
+    "wishknish",
+    "blockchain",
+    "dlt",
+    "distributed",
+    "ledger",
+    "tokens",
+    "nft"
+  ],
+  "bugs": {
+    "url": "https://github.com/WishKnish/Knish.IO-Examples/issues"
+  },
+  "homepage": "https://github.com/WishKnish/Knish.IO-Examples#readme"
+}
