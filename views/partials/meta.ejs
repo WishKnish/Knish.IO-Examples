@@ -1,0 +1,71 @@
+<h1>3. The Meta Assets</h1>
+<p>Knish.IO provides for dynamic, virtual data structures called Meta Assets. Specific Meta Assets are identified via a combination of <code>metaType</code> and <code>metaId</code> fields, and can have an arbitrary amount of <code>metas</code> storing key/value pairs of properties.</p>
+
+<div class="p-3">
+    <div class="card-body">
+        <div class="form-group row">
+            <label class="col-4 col-form-label" for="uri">Meta Type</label>
+            <div class="col-8">
+                <div class="input-group">
+                    <div class="input-group-prepend">
+                        <div class="input-group-text">
+                            <i class="bi bi-boxes"></i>
+                        </div>
+                    </div>
+                    <input id="metatype" name="metatype" placeholder="CryptoKitty" value="CryptoKitty" type="text" class="form-control" aria-describedby="metatypeHelpBlock" required="required">
+                </div>
+                <span id="metatypeHelpBlock" class="form-text text-muted">Please enter the <code>metaType</code>, representing the asset class name.</span>
+            </div>
+        </div>
+        <div class="form-group row">
+            <label class="col-4 col-form-label" for="uri">Meta ID</label>
+            <div class="col-8">
+                <div class="input-group">
+                    <div class="input-group-prepend">
+                        <div class="input-group-text">
+                            <i class="bi bi-box"></i>
+                        </div>
+                    </div>
+                    <input id="metaid" name="metaid" placeholder="fluffy" value="fluffy" type="text" class="form-control" aria-describedby="metaidHelpBlock" required="required">
+                </div>
+                <span id="metaidHelpBlock" class="form-text text-muted">Please enter the <code>metaId</code>, representing the identifier of an individual asset possessing the given <code>metaType</code>.</span>
+            </div>
+        </div>
+        <div class="form-group row">
+            <label class="col-4">Operation</label>
+            <div class="col-8">
+                <div class="custom-control custom-radio custom-control-inline">
+                    <input name="operation" id="operation_0" type="radio" class="custom-control-input" value="read" required="required" aria-describedby="operationHelpBlock" checked>
+                    <label for="operation_0" class="custom-control-label">Read</label>
+                </div>
+                <div class="custom-control custom-radio custom-control-inline">
+                    <input name="operation" id="operation_1" type="radio" class="custom-control-input" value="write" required="required" aria-describedby="legacyHelpBlock">
+                    <label for="operation_1" class="custom-control-label">Write</label>
+                </div>
+                <span id="operationHelpBlock" class="form-text text-muted">Choose which operation the Knish.IO client will perform on the given Meta Asset.</span>
+            </div>
+        </div>
+        <div id="meta" class="form-group row hidden">
+            <label class="col-4 col-form-label" for="uri">Metadata</label>
+            <div class="col-8">
+                <div class="input-group">
+                    <div class="input-group-prepend">
+                        <div class="input-group-text">
+                            <i class="bi bi-key"></i>
+                        </div>
+                    </div>
+                    <input id="key" name="key" placeholder="address" value="address" type="text" class="form-control" aria-describedby="metaHelpBlock" required="required">
+                </div>
+                <div class="input-group">
+                    <div class="input-group-prepend">
+                        <div class="input-group-text">
+                            <i class="bi bi-chat-dots"></i>
+                        </div>
+                    </div>
+                    <input id="value" name="value" placeholder="123 Main Street" value="123 Main Street" type="text" class="form-control" aria-describedby="metaHelpBlock" required="required">
+                </div>
+                <span id="metaHelpBlock" class="form-text text-muted">Enter the <code>key</code>:<code>value</code> pair for a metadata entry. The <code>createMeta</code> method can push multiple <code>key</code>:<code>value</code> combinations to the ledger.</span>
+            </div>
+        </div>
+    </div>
+</div>

@@ -1,4 +1,4 @@
-<h1>The Knish.IO Client</h1>
+<h1>1. The Knish.IO Client</h1>
 <p>The first step is to instantiate a <code>KnishIOClient</code> instance and assign a Cell. Your Cell represents your specific Knish.IO dApp. You should have received a <code>cellSlug</code> to use.</p>
 
 <div class="p-3">
@@ -20,7 +20,14 @@
         <div class="form-group row">
             <label for="cell" class="col-4 col-form-label">Cell Slug</label>
             <div class="col-8">
-                <input id="cell" name="cell" placeholder="TESTCELL" value="TESTCELL" type="text" class="form-control" aria-describedby="cellHelpBlock" required="required">
+                <div class="input-group">
+                    <div class="input-group-prepend">
+                        <div class="input-group-text">
+                            <i class="bi bi-window"></i>
+                        </div>
+                    </div>
+                    <input id="cell" name="cell" placeholder="TESTCELL" value="TESTCELL" type="text" class="form-control" aria-describedby="cellHelpBlock" required="required">
+                </div>
                 <span id="cellHelpBlock" class="form-text text-muted">Please enter the Knish.IO cell identifier for your dApp. You will receive one for production use.</span>
             </div>
         </div>
